@@ -1,5 +1,7 @@
 <?php
 
+namespace Damejidlo\ACL;
+
 use Nette\Object;
 
 

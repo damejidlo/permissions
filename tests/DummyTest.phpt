@@ -4,6 +4,7 @@ namespace Damejido\ACL\Tests;
 
 require_once __DIR__ . '/bootstrap.php';
 
+use Damejidlo\ACL\Dummy;
 use Tester\Assert;
 use Tester\TestCase;
 
@@ -17,7 +18,7 @@ class DummyTest extends TestCase
 
 	public function testDummy()
 	{
-		Assert::true((new \Dummy())->foo());
+		Assert::true((new Dummy())->foo());
 	}
 
 }
