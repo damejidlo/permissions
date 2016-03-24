@@ -1,1 +1,5 @@
-# permissions
+[![Downloads this Month](https://img.shields.io/packagist/dm/damejidlo/permissions.svg)](https://packagist.org/packages/damejidlo/permissions)
+[![Latest Stable Version](https://poser.pugx.org/damejidlo/permissions/v/stable)](https://github.com/damejidlo/permissions/releases)
+![](https://travis-ci.org/damejidlo/permissions.svg?branch=master)
+![](https://scrutinizer-ci.com/g/damejidlo/permissions/badges/quality-score.png?b=master)
+![](https://scrutinizer-ci.com/g/damejidlo/permissions/badges/coverage.png?b=master)

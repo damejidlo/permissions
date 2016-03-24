@@ -1,0 +1,36 @@
+{
+	"name": "damejidlo/permissions",
+	"description": "",
+	"type": "library",
+	"license": "MIT",
+	"keywords": [
+		"security",
+		"acl",
+		"nette",
+		"permission"
+	],
+	"authors": [
+		{
+			"name": "damejidlo.cz s.r.o.",
+			"homepage": "https://www.damejidlo.cz/"
+		},
+		{
+			"name": "Petr Hejna",
+			"homepage": "http://petrhejna.org",
+			"email": "hejna.peter@gmail.com"
+		}
+	],
+	"require": {
+		"nette/security": "2.3.*",
+		"php": ">=5.6"
+	},
+	"require-dev": {
+		"nette/tester": "@dev",
+		"mockery/mockery": "@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"Damejidlo\\ACL\\": "src/"
+		}
+	}
+}
