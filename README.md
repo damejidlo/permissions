@@ -190,7 +190,7 @@ Best way is to create your own `TemplateFactory`. And in `createTemplate` method
 ```
 
 # Usage
-An now, profit!
+And now, profit!
 ```php
 	// In some Presenter
 
