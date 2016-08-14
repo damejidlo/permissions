@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejidlo\ACL;
 
@@ -17,7 +18,7 @@ interface IAuthorizator
 	 * @param string $privilege
 	 * @return bool
 	 */
-	public function isAllowed(IUser $user, $resource, $privilege);
+	public function isAllowed(IUser $user, $resource, $privilege) : bool;
 
 
 

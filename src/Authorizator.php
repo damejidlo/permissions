@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejidlo\ACL;
 
@@ -32,7 +33,7 @@ class Authorizator extends Object implements IAuthorizator
 	/**
 	 * @inheritdoc
 	 */
-	public function isAllowed(IUser $user, $resource, $privilege)
+	public function isAllowed(IUser $user, $resource, $privilege) : bool
 	{
 		/**
 		 * Go: http://www.wolframalpha.com/
@@ -110,7 +111,7 @@ class Authorizator extends Object implements IAuthorizator
 	 * @param string[]|string $privileges
 	 * @param Closure|NULL $assertion
 	 */
-	protected function createDirective($directiveType, $roles, $resources, $privileges, Closure $assertion = NULL)
+	protected function createDirective(string $directiveType, $roles, $resources, $privileges, Closure $assertion = NULL)
 	{
 		$roles = is_array($roles) ? $roles : [$roles];
 		$resources = is_array($resources) ? $resources : [$resources];

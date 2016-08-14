@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejido\ACL\Tests;
 
@@ -17,7 +18,7 @@ class DollyIRole extends Object implements IRole
 	/**
 	 * @inheritdoc
 	 */
-	public function getRoleId()
+	public function getRoleId() : string
 	{
 		return self::ROLE_ID;
 	}

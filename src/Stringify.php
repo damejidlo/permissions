@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejidlo\ACL;
 
@@ -15,7 +16,7 @@ class Stringify extends Object
 	 * @param IResource|string $resource
 	 * @return string
 	 */
-	public static function stringifyResource($resource)
+	public static function stringifyResource($resource) : string
 	{
 		return $resource instanceof IResource ? $resource->getResourceId() : $resource;
 	}
@@ -26,7 +27,7 @@ class Stringify extends Object
 	 * @param IRole|string $role
 	 * @return string
 	 */
-	public static function stringifyRole($role)
+	public static function stringifyRole($role) : string
 	{
 		return $role instanceof IRole ? $role->getRoleId() : $role;
 	}
