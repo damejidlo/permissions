@@ -18,7 +18,7 @@ interface IAuthorizator
 	 * @param string $privilege
 	 * @return bool
 	 */
-	public function isAllowed(IUser $user, $resource, $privilege) : bool;
+	public function isAllowed(IUser $user, $resource, string $privilege) : bool;
 
 
 

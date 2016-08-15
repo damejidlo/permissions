@@ -14,7 +14,7 @@ trait MockIUserTrait
 {
 
 	/**
-	 * @param IRole[]|string[] $roles $roles
+	 * @param IRole[]|string[] $roles
 	 * @param int $userId
 	 * @return IUser|MockInterface
 	 */

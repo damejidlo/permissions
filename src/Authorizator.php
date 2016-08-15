@@ -33,7 +33,7 @@ class Authorizator extends Object implements IAuthorizator
 	/**
 	 * @inheritdoc
 	 */
-	public function isAllowed(IUser $user, $resource, $privilege) : bool
+	public function isAllowed(IUser $user, $resource, string $privilege) : bool
 	{
 		/**
 		 * Go: http://www.wolframalpha.com/

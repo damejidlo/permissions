@@ -72,7 +72,7 @@ class Directive extends Object
 	 * @param string $privilege
 	 * @return bool
 	 */
-	public function evaluate(IUser $user, $resource, $privilege) : bool
+	public function evaluate(IUser $user, $resource, string $privilege) : bool
 	{
 		foreach ($this->roles as $role) {
 			foreach ($user->getRoles() as $usersRole) {
