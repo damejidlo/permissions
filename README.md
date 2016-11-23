@@ -200,7 +200,7 @@ And now, profit!
 		$resource = new WorldResource($world);
 		$permission = 'destroy';
 
-		if (!$this->authenticator->isAllowed($this->user->getAclUser(), $resource, $permission) {
+		if (!$this->authorizator->isAllowed($this->user->getAclUser(), $resource, $permission) {
 			throw new NotAllowedException($resource, $permission);
 		}
 	}
