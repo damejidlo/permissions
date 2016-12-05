@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /**
  * @testCase
@@ -150,7 +151,7 @@ class AuthorizatorTest extends TestCase
 	/**
 	 * @return Authorizator
 	 */
-	private function getAuthorizator()
+	private function getAuthorizator() : Authorizator
 	{
 		$authorizator = new Authorizator();
 		$authorizator->addRole(self::ROLE_WRITER);

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejidlo\ACL;
 
@@ -16,7 +17,7 @@ class Directive extends Object
 	const DENY = 'deny';
 
 	/**
-	 * @var IRole[]string[]
+	 * @var IRole[]|string[]
 	 */
 	private $roles;
 
@@ -50,7 +51,7 @@ class Directive extends Object
 	 * @param Closure|NULL $assertion
 	 */
 	public function __construct(
-		$directiveType,
+		string $directiveType,
 		array $roles,
 		array $resources,
 		array $privileges,
@@ -71,7 +72,7 @@ class Directive extends Object
 	 * @param string $privilege
 	 * @return bool
 	 */
-	public function evaluate(IUser $user, $resource, $privilege)
+	public function evaluate(IUser $user, $resource, string $privilege) : bool
 	{
 		foreach ($this->roles as $role) {
 			foreach ($user->getRoles() as $usersRole) {
@@ -95,7 +96,7 @@ class Directive extends Object
 	/**
 	 * @return string
 	 */
-	public function getDirectiveType()
+	public function getDirectiveType() : string
 	{
 		return $this->directiveType;
 	}
@@ -106,7 +107,7 @@ class Directive extends Object
 	 * @param IResource|string $usersResource
 	 * @return bool
 	 */
-	private function isResourceQueried($usersResource)
+	private function isResourceQueried($usersResource) : bool
 	{
 		$usersResourceId = Stringify::stringifyResource($usersResource);
 		foreach ($this->resources as $resource) {
@@ -125,7 +126,7 @@ class Directive extends Object
 	 * @param string $privilege
 	 * @return bool
 	 */
-	private function isPrivilegeQueried($privilege)
+	private function isPrivilegeQueried($privilege) : bool
 	{
 		return in_array($privilege, $this->privileges, TRUE);
 	}

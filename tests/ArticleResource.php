@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejido\ACL\Tests;
 
@@ -22,7 +23,7 @@ class ArticleResource extends Object implements IResource
 	/**
 	 * @param int $id
 	 */
-	public function __construct($id)
+	public function __construct(int $id)
 	{
 		$this->id = $id;
 	}
@@ -32,7 +33,7 @@ class ArticleResource extends Object implements IResource
 	/**
 	 * @inheritdoc
 	 */
-	public function getResourceId()
+	public function getResourceId() : string
 	{
 		return self::RESOURCE_ID;
 	}
@@ -42,7 +43,7 @@ class ArticleResource extends Object implements IResource
 	/**
 	 * @return int
 	 */
-	public function getId()
+	public function getId() : int
 	{
 		return $this->id;
 	}

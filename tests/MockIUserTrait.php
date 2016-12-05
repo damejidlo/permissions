@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejido\ACL\Tests;
 
@@ -13,7 +14,7 @@ trait MockIUserTrait
 {
 
 	/**
-	 * @param IRole[]|string[] $roles $roles
+	 * @param IRole[]|string[] $roles
 	 * @param int $userId
 	 * @return IUser|MockInterface
 	 */

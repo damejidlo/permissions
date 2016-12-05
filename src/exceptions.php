@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejidlo\ACL;
 
@@ -41,7 +42,7 @@ class NotAllowedException extends Exception
 	 * @param IResource $resource
 	 * @param string $privilege
 	 */
-	public function __construct(IResource $resource, $privilege)
+	public function __construct(IResource $resource, string $privilege)
 	{
 		$this->resource = $resource;
 		$this->privilege = $privilege;
@@ -52,7 +53,7 @@ class NotAllowedException extends Exception
 	/**
 	 * @return IResource
 	 */
-	public function getResource()
+	public function getResource() : IResource
 	{
 		return $this->resource;
 	}
@@ -62,7 +63,7 @@ class NotAllowedException extends Exception
 	/**
 	 * @return string
 	 */
-	public function getPrivilege()
+	public function getPrivilege() : string
 	{
 		return $this->privilege;
 	}
