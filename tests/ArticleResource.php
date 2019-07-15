@@ -12,7 +12,7 @@ class ArticleResource implements IResource
 
 	use SmartObject;
 
-	const RESOURCE_ID = 'article';
+	public const RESOURCE_ID = 'article';
 
 	/**
 	 * @var int

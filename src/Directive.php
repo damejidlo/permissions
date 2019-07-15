@@ -14,8 +14,8 @@ class Directive
 
 	use SmartObject;
 
-	const ALLOW = 'allow';
-	const DENY = 'deny';
+	public const ALLOW = 'allow';
+	public const DENY = 'deny';
 
 	/**
 	 * @var IRole[]string[]

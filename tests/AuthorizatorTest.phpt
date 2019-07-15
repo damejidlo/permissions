@@ -29,8 +29,8 @@ class AuthorizatorTest extends TestCase
 	use MockIUserTrait;
 	use SmartObject;
 
-	const ROLE_WRITER = 'writer';
-	const ARTICLE_WRITE = 'write';
+	public const ROLE_WRITER = 'writer';
+	public const ARTICLE_WRITE = 'write';
 
 
 

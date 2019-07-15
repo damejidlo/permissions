@@ -12,7 +12,7 @@ class DummyIRole implements IRole
 
 	use SmartObject;
 
-	const ROLE_ID = 'dummy';
+	private const ROLE_ID = 'dummy';
 
 
 

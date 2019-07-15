@@ -12,7 +12,7 @@ class DollyIRole implements IRole
 
 	use SmartObject;
 
-	const ROLE_ID = 'dolly';
+	public const ROLE_ID = 'dolly';
 
 
 
