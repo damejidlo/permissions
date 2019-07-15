@@ -21,12 +21,14 @@
 		}
 	],
 	"require": {
-		"nette/security": "^2.3",
-		"php": ">=5.6"
+		"nette/security": "^2.4",
+		"php": ">=7.1",
+		"nette/utils": "^2.4",
+		"damejidlo/coding-standard": "^0.10.0"
 	},
 	"require-dev": {
-		"nette/tester": "@dev",
-		"mockery/mockery": "@dev"
+		"nette/tester": "^2.2",
+		"mockery/mockery": "^1.2"
 	},
 	"autoload": {
 		"psr-4": {

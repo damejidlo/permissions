@@ -3,17 +3,19 @@
 namespace Damejidlo\ACL;
 
 use Closure;
-use Nette\Object;
 use Nette\Security\IResource;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class Directive extends Object
+class Directive
 {
 
-	const ALLOW = 'allow';
-	const DENY = 'deny';
+	use SmartObject;
+
+	public const ALLOW = 'allow';
+	public const DENY = 'deny';
 
 	/**
 	 * @var IRole[]string[]
@@ -54,7 +56,7 @@ class Directive extends Object
 		array $roles,
 		array $resources,
 		array $privileges,
-		Closure $assertion = NULL
+		?Closure $assertion = NULL
 	) {
 		$this->roles = $roles;
 		$this->resources = $resources;

@@ -2,15 +2,17 @@
 
 namespace Damejido\ACL\Tests;
 
-use Nette\Object;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class DummyIRole extends Object implements IRole
+class DummyIRole implements IRole
 {
 
-	const ROLE_ID = 'dummy';
+	use SmartObject;
+
+	private const ROLE_ID = 'dummy';
 
 
 
@@ -23,4 +25,3 @@ class DummyIRole extends Object implements IRole
 	}
 
 }
-

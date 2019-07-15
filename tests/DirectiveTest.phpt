@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /**
  * @testCase
@@ -11,7 +12,7 @@ require_once __DIR__ . '/MockIUserTrait.php';
 
 use Damejidlo\ACL\Directive;
 use Damejidlo\ACL\IUser;
-use Mockery;
+use Nette\SmartObject;
 use Tester\Assert;
 use Tester\TestCase;
 
@@ -21,10 +22,11 @@ class DirectiveTest extends TestCase
 {
 
 	use MockIUserTrait;
+	use SmartObject;
 
 
 
-	public function testDoesNotMatch()
+	public function testDoesNotMatch() : void
 	{
 		$assertion = function (IUser $user, $queriedRole, $queriedResource) {
 			/** @var ArticleResource $queriedResource */

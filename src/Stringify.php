@@ -2,14 +2,18 @@
 
 namespace Damejidlo\ACL;
 
-use Nette\Object;
 use Nette\Security\IResource;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class Stringify extends Object
+class Stringify
 {
+
+	use SmartObject;
+
+
 
 	/**
 	 * @param IResource|string $resource
