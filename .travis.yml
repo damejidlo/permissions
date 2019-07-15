@@ -2,12 +2,16 @@ language: php
 
 php:
   - 7.1
+  - 7.2
 
-before_script:
-  - composer self-update || echo "[ERROR] update-composer failed!"
-  - composer install --no-interaction --optimize-autoloader
+env:
+  - COMPOSER_ARGS=""
+  - COMPOSER_ARGS="--prefer-stable"
+  - COMPOSER_ARGS="--prefer-stable --prefer-lowest"
+
+install:
+  - travis_retry composer update --no-interaction --prefer-dist $COMPOSER_ARGS
 
 script:
-  - ./vendor/bin/tester -s -j 32 -c ./tests/php.ini ./tests --coverage coverage.xml --coverage-src src
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+  - vendor/bin/tester -p php -s -j 32 tests
+  - vendor/bin/phpcs --standard=vendor/damejidlo/coding-standard/DameJidloCodingStandard/ruleset.xml --ignore=tests/tmp/* --encoding=utf-8 src tests
