@@ -10,7 +10,7 @@ use Nette\SmartObject;
 class ArticleResource implements IResource
 {
 
-    use SmartObject;
+	use SmartObject;
 
 	const RESOURCE_ID = 'article';
 

@@ -28,7 +28,7 @@ interface IAuthorizator
 	 * @param Closure|NULL $assertion
 	 * @return void
 	 */
-	public function allow($roles, $resources, $privileges, Closure $assertion = NULL);
+	public function allow($roles, $resources, $privileges, ?Closure $assertion = NULL);
 
 
 
@@ -39,6 +39,6 @@ interface IAuthorizator
 	 * @param Closure|NULL $assertion
 	 * @return void
 	 */
-	public function deny($roles, $resources, $privileges, Closure $assertion = NULL);
+	public function deny($roles, $resources, $privileges, ?Closure $assertion = NULL);
 
 }

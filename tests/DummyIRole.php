@@ -9,7 +9,8 @@ use Nette\SmartObject;
 
 class DummyIRole implements IRole
 {
-    use SmartObject;
+
+	use SmartObject;
 
 	const ROLE_ID = 'dummy';
 
@@ -24,4 +25,3 @@ class DummyIRole implements IRole
 	}
 
 }
-

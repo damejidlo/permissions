@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /**
  * @testCase
@@ -33,7 +34,7 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testSimpleAllow()
+	public function testSimpleAllow() : void
 	{
 		$authorizator = $this->getAuthorizator();
 		$authorizator->allow(self::ROLE_WRITER, ArticleResource::RESOURCE_ID, self::ARTICLE_WRITE);
@@ -47,7 +48,7 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testSimpleCallbackAllow()
+	public function testSimpleCallbackAllow() : void
 	{
 		$authorizator = $this->getAuthorizator();
 
@@ -73,7 +74,7 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testSimpleNotAllowed()
+	public function testSimpleNotAllowed() : void
 	{
 		$authorizator = new Authorizator();
 		$authorizator->addRole('foo');
@@ -87,7 +88,7 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testDenySimple()
+	public function testDenySimple() : void
 	{
 		$authorizator = $this->getAuthorizator();
 		$authorizator->allow(self::ROLE_WRITER, ArticleResource::RESOURCE_ID, ['foo', 'bar']);
@@ -108,14 +109,14 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testDoesNotExists()
+	public function testDoesNotExists() : void
 	{
-		Assert::exception(function () {
+		Assert::exception(function () : void {
 			$authorizator = new Authorizator();
 			$authorizator->allow('foo', 'bar', 'baz');
 		}, RoleDoesNotExists::class);
 
-		Assert::exception(function () {
+		Assert::exception(function () : void {
 			$authorizator = new Authorizator();
 			$authorizator->addRole('foo');
 			$authorizator->allow('foo', 'bar', 'baz');
@@ -124,7 +125,7 @@ class AuthorizatorTest extends TestCase
 
 
 
-	public function testIRoleObject()
+	public function testIRoleObject() : void
 	{
 		$dollyRole = new DollyIRole();
 		$dummyRole = new DummyIRole();
@@ -151,7 +152,7 @@ class AuthorizatorTest extends TestCase
 	/**
 	 * @return Authorizator
 	 */
-	private function getAuthorizator()
+	private function getAuthorizator() : Authorizator
 	{
 		$authorizator = new Authorizator();
 		$authorizator->addRole(self::ROLE_WRITER);

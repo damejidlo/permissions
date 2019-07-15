@@ -10,7 +10,10 @@ use Nette\SmartObject;
 
 class Stringify
 {
-    use SmartObject;
+
+	use SmartObject;
+
+
 
 	/**
 	 * @param IResource|string $resource

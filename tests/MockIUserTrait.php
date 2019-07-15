@@ -23,4 +23,5 @@ trait MockIUserTrait
 			->shouldReceive('getRoles')->andReturn($roles)->getMock()
 			->shouldReceive('getEntity')->andReturn(['id' => $userId])->getMock();
 	}
+
 }

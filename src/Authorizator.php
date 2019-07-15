@@ -11,7 +11,8 @@ use Nette\SmartObject;
 
 class Authorizator implements IAuthorizator
 {
-    use SmartObject;
+
+	use SmartObject;
 
 	/**
 	 * @var Directive[]
@@ -63,7 +64,7 @@ class Authorizator implements IAuthorizator
 	/**
 	 * @inheritdoc
 	 */
-	public function allow($roles, $resources, $privileges, Closure $assertion = NULL)
+	public function allow($roles, $resources, $privileges, ?Closure $assertion = NULL)
 	{
 		$this->createDirective(Directive::ALLOW, $roles, $resources, $privileges, $assertion);
 	}
@@ -73,7 +74,7 @@ class Authorizator implements IAuthorizator
 	/**
 	 * @inheritdoc
 	 */
-	public function deny($roles, $resources, $privileges, Closure $assertion = NULL)
+	public function deny($roles, $resources, $privileges, ?Closure $assertion = NULL)
 	{
 		$this->createDirective(Directive::DENY, $roles, $resources, $privileges, $assertion);
 	}
@@ -111,7 +112,7 @@ class Authorizator implements IAuthorizator
 	 * @param string[]|string $privileges
 	 * @param Closure|NULL $assertion
 	 */
-	protected function createDirective($directiveType, $roles, $resources, $privileges, Closure $assertion = NULL)
+	protected function createDirective($directiveType, $roles, $resources, $privileges, ?Closure $assertion = NULL)
 	{
 		$roles = is_array($roles) ? $roles : [$roles];
 		$resources = is_array($resources) ? $resources : [$resources];

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Damejido\ACL\Tests;
 
@@ -14,7 +15,7 @@ use Tester\TestCase;
 class NotAllowedExceptionTest extends TestCase
 {
 
-	public function testAll()
+	public function testAll() : void
 	{
 		$resource = new ArticleResource(9);
 		$exception = new NotAllowedException($resource, 'edit');

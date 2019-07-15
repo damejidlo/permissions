@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /**
  * @testCase
@@ -25,7 +26,7 @@ class DirectiveTest extends TestCase
 
 
 
-	public function testDoesNotMatch()
+	public function testDoesNotMatch() : void
 	{
 		$assertion = function (IUser $user, $queriedRole, $queriedResource) {
 			/** @var ArticleResource $queriedResource */

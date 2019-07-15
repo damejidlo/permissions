@@ -12,7 +12,7 @@ use Nette\SmartObject;
 class Directive
 {
 
-    use SmartObject;
+	use SmartObject;
 
 	const ALLOW = 'allow';
 	const DENY = 'deny';
@@ -56,7 +56,7 @@ class Directive
 		array $roles,
 		array $resources,
 		array $privileges,
-		Closure $assertion = NULL
+		?Closure $assertion = NULL
 	) {
 		$this->roles = $roles;
 		$this->resources = $resources;
