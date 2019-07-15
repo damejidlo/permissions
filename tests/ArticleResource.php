@@ -2,13 +2,15 @@
 
 namespace Damejido\ACL\Tests;
 
-use Nette\Object;
 use Nette\Security\IResource;
+use Nette\SmartObject;
 
 
 
-class ArticleResource extends Object implements IResource
+class ArticleResource implements IResource
 {
+
+    use SmartObject;
 
 	const RESOURCE_ID = 'article';
 

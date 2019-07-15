@@ -3,14 +3,15 @@
 namespace Damejidlo\ACL;
 
 use Closure;
-use Nette\Object;
 use Nette\Security\IResource;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class Authorizator extends Object implements IAuthorizator
+class Authorizator implements IAuthorizator
 {
+    use SmartObject;
 
 	/**
 	 * @var Directive[]

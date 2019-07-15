@@ -3,14 +3,16 @@
 namespace Damejidlo\ACL;
 
 use Closure;
-use Nette\Object;
 use Nette\Security\IResource;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class Directive extends Object
+class Directive
 {
+
+    use SmartObject;
 
 	const ALLOW = 'allow';
 	const DENY = 'deny';

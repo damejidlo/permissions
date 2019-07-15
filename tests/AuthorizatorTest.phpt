@@ -16,7 +16,7 @@ use Damejidlo\ACL\Authorizator;
 use Damejidlo\ACL\IUser;
 use Damejidlo\ACL\ResourceDoesNotExists;
 use Damejidlo\ACL\RoleDoesNotExists;
-use Mockery;
+use Nette\SmartObject;
 use Tester\Assert;
 use Tester\TestCase;
 
@@ -26,6 +26,7 @@ class AuthorizatorTest extends TestCase
 {
 
 	use MockIUserTrait;
+	use SmartObject;
 
 	const ROLE_WRITER = 'writer';
 	const ARTICLE_WRITE = 'write';

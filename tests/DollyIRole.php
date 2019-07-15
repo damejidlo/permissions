@@ -2,13 +2,15 @@
 
 namespace Damejido\ACL\Tests;
 
-use Nette\Object;
 use Nette\Security\IRole;
+use Nette\SmartObject;
 
 
 
-class DollyIRole extends Object implements IRole
+class DollyIRole implements IRole
 {
+
+    use SmartObject;
 
 	const ROLE_ID = 'dolly';
 

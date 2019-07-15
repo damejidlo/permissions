@@ -6,7 +6,6 @@ require_once __DIR__ . '/bootstrap.php';
 require_once __DIR__ . '/ArticleResource.php';
 
 use Damejidlo\ACL\NotAllowedException;
-use Mockery;
 use Tester\Assert;
 use Tester\TestCase;
 
