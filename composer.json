@@ -23,10 +23,10 @@
 	"require": {
 		"nette/security": "^2.4",
 		"php": ">=7.1",
-		"nette/utils": "^2.4",
-		"damejidlo/coding-standard": "^0.10.0"
+		"nette/utils": "^2.4"
 	},
 	"require-dev": {
+		"damejidlo/coding-standard": "^0.10.0",
 		"nette/tester": "^2.2",
 		"mockery/mockery": "^1.2"
 	},
